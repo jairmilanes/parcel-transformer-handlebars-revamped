@@ -7,13 +7,13 @@ Transform handlebars templates to HTML, enhanced with [handlebars-layouts](https
 Install with [npm](https://www.npmjs.com/):
 
 ```bash
-$ npm install --save @jairmilanes/parcel-transformer-handlebars-revamped
+$ npm install --save @jmilanes/parcel-transformer-handlebars-revamped
 ```
 
 Install with [yarn](https://yarnpkg.com):
 
 ```bash
-$ yarn add @jairmilanes/parcel-transformer-handlebars-revamped
+$ yarn add @jmilanes/parcel-transformer-handlebars-revamped
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ Add it to your `.parcelrc`:
 {
   "extends": ["@parcel/config-default"],
   "transformers": {
-    "*.hbs": ["@jairmilanes/parcel-transformer-handlebars-revamped"],
+    "*.hbs": ["@jmilanes/parcel-transformer-handlebars-revamped"],
   },
 }
 ```

@@ -1,7 +1,8 @@
 {
-  "name": "@jairmilanes/parcel-transformer-handlebars-revamped",
+  "name": "@jmilanes/parcel-transformer-handlebars-revamped",
   "version": "1.0.0",
   "description": "Transform handlebars templates to HTML with support for json and .rc configurations files.",
+  "private": false,
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
