@@ -46,7 +46,7 @@ By default, this plugin expects your folder structure to be as follows:
 You can customize the location of your handlebars files and extensions by adding a configuration file the root of our project, this file can be one of the following:
 
 1. `hbs.config.json`
-2. `handlebars.config.json`,
+2. `handlebars.config.json`
 3. `.hbsrc`
 4. `.handlebarsrc`
 
