@@ -1,20 +1,30 @@
-# @cobra/parcel-transformer-handlebars
+# Parcel Transformer Handlebars Revamped
 
-Transform handlebars templates to HTML, enhanced with (handlebars-layouts)[https://www.npmjs.com/package/handlebars-layouts], (handlebars-helpers)[https://www.npmjs.com/package/handlebars-helpers] and (front-matter)[https://www.npmjs.com/package/front-matter].
+Transform handlebars templates to HTML, enhanced with [handlebars-layouts](https://www.npmjs.com/package/handlebars-layouts), [handlebars-helpers](https://www.npmjs.com/package/handlebars-helpers) and [front-matter](https://www.npmjs.com/package/front-matter).
 
 ## Installation
+
+Install with [npm](https://www.npmjs.com/):
+
+```bash
+$ npm install --save @jairmilanes/parcel-transformer-handlebars-revamped
 ```
-npm install -D @jmilanes/parcel-transformer-handlebars-revamped
+
+Install with [yarn](https://yarnpkg.com):
+
+```bash
+$ yarn add @jairmilanes/parcel-transformer-handlebars-revamped
 ```
 
 ## Usage
+
 Add it to your `.parcelrc`:
 
 ```
 {
   "extends": ["@parcel/config-default"],
   "transformers": {
-    "*.hbs": ["@jmilanes/parcel-transformer-handlebars"],
+    "*.hbs": ["@jairmilanes/parcel-transformer-handlebars-revamped"],
   },
 }
 ```
@@ -52,6 +62,77 @@ Configuration example:
 ```
 
 That's it, create your html files using Handlebars and parcel will compile tham to `.html`.
+
+## Features
+
+### frontmatter
+The plugin has built in support for frontmatter yaml. Processed yaml data will be passed into the templates before compilation. frontmatter yaml data will preferably be at the top of the template file such as the following example:
+
+#### Source - `example.hbs`
+```html
+---
+title: This is a heading
+desc: this is a paragraph
+names:
+  - bob
+  - jane
+  - mark
+---
+{{!< mainlayout}}
+
+<h1>{{title}}</h1>
+<p>{{desc}}</p>
+<ul>
+{{#each names}}
+  <li>{{this}}</li>
+{{/each}}
+</ul>
+```
+
+#### Output - `example.html`
+```html
+<html>
+  <body>
+    <h1>This is a heading</h1>
+    <p>this is a paragraph</p>
+    <ul>
+      <li>bob</li>
+      <li>jane</li>
+      <li>mark</li>
+    </ul>
+  </body>
+</html>
+```
+
+### Handlebars Layouts
+The plugin has built in support for [handlebars-layouts](https://www.npmjs.com/package/handlebars-layouts). The [advanced example](https://github.com/TheBlackBolt/parcel-plugin-handlebars/tree/master/examples/advanced) shows how to take advantage of handlebars layouts.
+Please refer to their documentation for more information.
+
+### Handlebars Helpers
+The plugin is also including all helpers found in the npm package [handlebars-helpers](https://www.npmjs.com/package/handlebars-helpers).
+Please refer to their documentation for example usages.
+
+### Environment Variables
+
+During compililation the plugin will also pass the following variable(s) to the template:
+
+- NODE_ENV
+
+This can be useful when you want specific code to show up on production builds.
+
+```html
+{{#eq NODE_ENV "production"}}
+<!-- Production only code -->
+{{/eq}}
+```
+
+Or perhaps the opposite
+
+```html
+{{#isnt NODE_ENV "production"}}
+<!-- Development only code -->
+{{/isnt}}
+```
 
 ## LICENSE
 

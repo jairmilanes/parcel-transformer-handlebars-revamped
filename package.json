@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jairmilanes/parcel-transformer-handlebars.git"
+    "url": "git+https://github.com/jairmilanes/parcel-transformer-handlebars-revamped.git"
   },
   "peerDependencies": {
     "parcel": ">=2.0.0"
@@ -23,12 +23,12 @@
     "handlebars-layouts": "^3.1.4",
     "handlebars-wax": "^6.1.0"
   },
-  "author": "Andrey Volokitin",
-  "license": "ISC",
+  "author": "Jair Milanes",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jairmilanes/parcel-transformer-handlebars/issues"
+    "url": "https://github.com/jairmilanes/parcel-transformer-handlebars-revamped/issues"
   },
-  "homepage": "https://github.com/jairmilanes/parcel-transformer-handlebars#readme",
+  "homepage": "https://github.com/jairmilanes/parcel-transformer-handlebars-revamped#readme",
   "keywords": [
     "parcel",
     "handlebars",
