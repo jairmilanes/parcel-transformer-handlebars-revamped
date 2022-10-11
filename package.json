@@ -1,0 +1,38 @@
+{
+  "name": "@jairmilanes/parcel-transformer-handlebars-revamped",
+  "version": "1.0.0",
+  "description": "Transform handlebars templates to HTML with support for json and .rc configurations files.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "parcel": ">=2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jairmilanes/parcel-transformer-handlebars.git"
+  },
+  "peerDependencies": {
+    "parcel": ">=2.0.0"
+  },
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "handlebars": "^4.7.7",
+    "handlebars-helpers": "^0.10.0",
+    "handlebars-layouts": "^3.1.4",
+    "handlebars-wax": "^6.1.0"
+  },
+  "author": "Andrey Volokitin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jairmilanes/parcel-transformer-handlebars/issues"
+  },
+  "homepage": "https://github.com/jairmilanes/parcel-transformer-handlebars#readme",
+  "keywords": [
+    "parcel",
+    "handlebars",
+    "handlebars-layouts",
+    "handlebars-helpers"
+  ]
+}
